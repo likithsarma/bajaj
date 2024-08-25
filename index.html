@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Roll Number</title> <!-- Replace with your roll number -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>JSON Data Input</h1>
+        <form id="dataForm">
+            <textarea id="jsonInput" rows="10" cols="50" placeholder='Enter JSON data here...'></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result">
+            <label for="responseSelect">Select Response:</label>
+            <select id="responseSelect">
+                <option value="numbers">Numbers</option>
+                <option value="alphabets">Alphabets</option>
+                <option value="highest_lowercase_alphabet">Highest Lowercase Alphabet</option>
+            </select>
+            <div id="responseOutput"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
